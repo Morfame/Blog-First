@@ -2,11 +2,11 @@
 <ul>
   <%@articles.each do |article|%>
     <p>
-      <strong><%= article.title%></strong>
+    <strong><%= article.title%></strong>
       <p><%=article.content%></p>
-      <%=link_to "Create new - ", '#'%>
-      <%=link_to "Read article - ", article_path(article.id)%>
-      <%=link_to "Update article - ", '#'%>
+      <%=link_to "Create new article", '#'%>
+      <%=link_to "Read article", article_path(article.id)%>
+      <%=link_to "Update article", '#'%>
       <%=link_to "Delete artcle", '#'%>
       </p>
   <%end%>
