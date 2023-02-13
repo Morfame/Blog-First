@@ -4,10 +4,8 @@
     <p>
     <strong><%= article.title%></strong>
       <p><%=article.content%></p>
-      <%=link_to "Create new article", '#'%>
-      <%=link_to "Read article", article_path(article.id)%>
-      <%=link_to "Update article", '#'%>
-      <%=link_to "Delete artcle", '#'%>
+      <%=link_to "New", articles_new_path%>
+      <%=link_to "Read", article_path(article.id)%>
       </p>
   <%end%>
 </ul>
