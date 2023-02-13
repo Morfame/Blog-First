@@ -2,11 +2,11 @@
 <ul>
   <%@articles.each do |article|%>
     <p>
-    <strong><%= article.title%></strong>
+      <strong><%= article.title%></strong>
       <p><%=article.content%></p>
       <%=link_to "New", articles_new_path%>
       <%=link_to "Read", article_path(article.id)%>
-      <%=button_to "Delete", article_path(article.id), method: :delete%>
-      </p>
+      <%= button_to "Delete", article_path(article.id), method: :delete, data: {"turbo-confirm": 'Are you sure?'} %>
+    </p>
   <%end%>
 </ul>
