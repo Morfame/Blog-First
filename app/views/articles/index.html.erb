@@ -6,6 +6,7 @@
       <p><%=article.content%></p>
       <%=link_to "New", articles_new_path%>
       <%=link_to "Read", article_path(article.id)%>
+      <%=button_to "Delete", article_path(article.id), method: :delete%>
       </p>
   <%end%>
 </ul>
