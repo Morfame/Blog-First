@@ -1,9 +1,11 @@
-<h1>This is our index page</h1>
+<h1>Article Listings</h1>
 <ul>
   <%@articles.each do |article|%>
     <p>
       <strong><%= article.title%></strong>
-      <p><%=article.content%></p>
+
+      <!-- <p><%=article.content%></p> REMOVED for CLARITY of index page-->
+      
       <%=link_to "New", articles_new_path%>
       <%=link_to "Read", article_path(article.id)%>
       <%= button_to "Delete", article_path(article.id), method: :delete, data: {"turbo-confirm": 'Are you sure?'} %>
