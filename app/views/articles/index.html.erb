@@ -6,9 +6,9 @@
 
       <!-- <p><%=article.content%></p> REMOVED for CLARITY of index page-->
       
-      <%=link_to "New", articles_new_path%>
-      <%=link_to "Read", article_path(article.id)%>
-      <%= button_to "Delete", article_path(article.id), method: :delete, data: {"turbo-confirm": 'Are you sure?'} %>
+      <%=link_to "New", new_article_path%>
+      <%=link_to "Read", article%>
+      <%= button_to "Delete", article, method: :delete, data: {"turbo-confirm": 'Are you sure?'} %>
     </p>
   <%end%>
 </ul>
